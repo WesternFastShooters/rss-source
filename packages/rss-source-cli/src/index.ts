@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+import { realpathSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { parseArgs, type ParseArgsOptionsConfig } from "node:util";
 import { CliError, RssSourceClient } from "./client.js";
 import { discoverFoloSubscriptions, syncFoloSubscriptions } from "./folo.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 
 type GlobalOptions = {
   args: string[];
@@ -275,6 +276,15 @@ function failure(error: unknown): void {
   process.exitCode = 1;
 }
 
-if (process.argv[1] !== undefined && fileURLToPath(import.meta.url) === process.argv[1]) {
+function isEntrypoint(): boolean {
+  if (process.argv[1] === undefined) return false;
+  try {
+    return fileURLToPath(import.meta.url) === realpathSync(process.argv[1]);
+  } catch {
+    return false;
+  }
+}
+
+if (isEntrypoint()) {
   runCli(process.argv.slice(2)).then(success, failure);
 }
