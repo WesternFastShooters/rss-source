@@ -1,4 +1,4 @@
-name: Test and publish image
+name: Test, publish and deploy RSS Source
 
 on:
   pull_request:
@@ -11,10 +11,11 @@ permissions:
 
 env:
   NODE_VERSION: 24.18.0
-  IMAGE_NAME: ghcr.io/westernfastshooters/ai-llm-agent-rss
+  IMAGE_NAME: ghcr.io/westernfastshooters/rss-source
+  LEGACY_IMAGE_NAME: ghcr.io/westernfastshooters/ai-llm-agent-rss
 
 concurrency:
-  group: ai-llm-agent-rss-${{ github.ref }}
+  group: rss-source-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -89,7 +90,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.IMAGE_NAME }}
+          images: |
+            ${{ env.IMAGE_NAME }}
+            ${{ env.LEGACY_IMAGE_NAME }}
           tags: |
             type=raw,value=latest
             type=sha,format=long
@@ -120,9 +123,9 @@ jobs:
           DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
         run: |
           install -d -m 700 ~/.ssh
-          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/ai-llm-agent-rss
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/rss-source
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/ai-llm-agent-rss ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/rss-source ~/.ssh/known_hosts
 
       - name: Deploy immutable image to Tencent Cloud
         env:
@@ -131,7 +134,7 @@ jobs:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
           printf '%s' "$GHCR_TOKEN" | ssh \
-            -i ~/.ssh/ai-llm-agent-rss \
+            -i ~/.ssh/rss-source \
             -o BatchMode=yes \
             -o IdentitiesOnly=yes \
             "$DEPLOY_USER@$DEPLOY_HOST" \

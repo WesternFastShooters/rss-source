@@ -86,7 +86,7 @@ function escapeXml(value: string): string {
     .replaceAll("'", "&apos;");
 }
 
-export function generateOpml(feeds: FeedRecord[], title = "AI LLM Agent RSS subscriptions"): string {
+export function generateOpml(feeds: FeedRecord[], title = "RSS Source subscriptions"): string {
   const categories = new Map<string, FeedRecord[]>();
   for (const feed of feeds) {
     const items = categories.get(feed.category) ?? [];

@@ -1,3 +1,5 @@
+# The legacy Compose project name is intentionally retained so an in-place
+# production upgrade reuses the existing containers and data volumes.
 name: ai-llm-agent-rss
 
 x-logging: &default-logging
@@ -8,7 +10,7 @@ x-logging: &default-logging
 
 services:
   app:
-    image: ${IMAGE_NAME:-ghcr.io/westernfastshooters/ai-llm-agent-rss}:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAME:-ghcr.io/westernfastshooters/rss-source}:${IMAGE_TAG:-latest}
     restart: unless-stopped
     init: true
     ports:

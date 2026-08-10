@@ -24,7 +24,7 @@ const schema = z
     FETCH_CONCURRENCY: z.coerce.number().int().min(1).max(50).default(6),
     DEFAULT_FETCH_INTERVAL_MINUTES: z.coerce.number().int().min(5).max(10080).default(30),
     SCHEDULER_TICK_SECONDS: z.coerce.number().int().min(5).max(3600).default(30),
-    USER_AGENT: z.string().default("ai-llm-agent-rss/0.1 (+https://github.com/WesternFastShooters/ai-llm-agent-rss)"),
+    USER_AGENT: z.string().default("rss-source/0.2 (+https://github.com/WesternFastShooters/rss-source)"),
   })
   .superRefine((value, context) => {
     if (value.NODE_ENV === "production" && value.APP_API_KEY.toLowerCase().includes("change-me")) {

@@ -1,7 +1,4 @@
-import { createMcpExpressApp } from "@modelcontextprotocol/express";
-import { toNodeHandler } from "@modelcontextprotocol/node";
-import { createMcpHandler } from "@modelcontextprotocol/server";
-import express, { type ErrorRequestHandler, type RequestHandler } from "express";
+import express, { type ErrorRequestHandler } from "express";
 import helmet from "helmet";
 import type pg from "pg";
 import { pinoHttp } from "pino-http";
@@ -10,9 +7,9 @@ import type { AppConfig } from "../config.js";
 import { AppError } from "../errors.js";
 import type { FeedService } from "../feed/service.js";
 import type { AppLogger } from "../logger.js";
-import { createRssMcpServer } from "../mcp/server.js";
 import { generateOpml, parseOpml } from "../opml.js";
 import { apiKeyAuth } from "./auth.js";
+import { requestTargetValidation } from "./security.js";
 
 const feedIdParams = z.object({ id: z.uuid() });
 const addFeedBody = z.object({
@@ -56,22 +53,19 @@ export type AppDependencies = {
 };
 
 export function createApp({ config, pool, service, logger }: AppDependencies) {
-  const app = createMcpExpressApp({
-    host: config.host,
-    allowedHosts: config.allowedHosts,
-    allowedOrigins: config.allowedOrigins,
-    jsonLimit: "1mb",
-  });
+  const app = express();
   app.disable("x-powered-by");
   app.set("trust proxy", 1);
+  app.use(requestTargetValidation(config.allowedHosts, config.allowedOrigins));
   app.use(helmet({ contentSecurityPolicy: false }));
   app.use(pinoHttp({ logger }));
+  app.use(express.json({ limit: "1mb" }));
 
   app.get("/", (_request, response) => {
     response.json({
-      name: "ai-llm-agent-rss",
-      version: "0.1.0",
-      endpoints: { health: "/health", readiness: "/ready", api: "/api", mcp: "/mcp" },
+      name: "rss-source",
+      version: "0.2.0",
+      endpoints: { health: "/health", readiness: "/ready", api: "/api" },
     });
   });
 
@@ -89,16 +83,6 @@ export function createApp({ config, pool, service, logger }: AppDependencies) {
   });
 
   const auth = apiKeyAuth(config.appApiKey);
-  const mcpHandler = createMcpHandler(() => createRssMcpServer(service), {
-    onerror: (error) => logger.error({ err: error }, "MCP handler error"),
-  });
-  const nodeMcpHandler = toNodeHandler(mcpHandler, {
-    onerror: (error) => logger.error({ err: error }, "MCP Node adapter error"),
-  });
-  app.all("/mcp", auth, ((request, response, next) => {
-    void nodeMcpHandler(request, response, request.body).catch(next);
-  }) as RequestHandler);
-
   const api = express.Router();
   api.use(auth);
 

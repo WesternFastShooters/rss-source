@@ -2,7 +2,8 @@
 
 目标环境：Ubuntu 24.04 LTS、linux/amd64、2 核 CPU、4GB 内存、Docker 29、Docker Compose 2。
 
-本文件只描述部署准备和命令。本项目不会自动连接或修改服务器。
+当前实例已经由 GitHub Actions 自动部署；本文件同时记录新安装和现有实例的安全
+升级方式。
 
 当前生产链路由 `.github/workflows/ci.yaml` 自动执行：测试成功后构建并推送
 不可变 GHCR 镜像，再通过 CI 专用的受限 SSH 密钥调用
@@ -19,9 +20,13 @@
 CI 密钥在服务器的 `authorized_keys` 中必须绑定固定命令，并使用 `restrict`，不能
 作为普通 SSH 登录密钥使用。
 
-## 1. 服务器目录
+## 1. 服务器目录与改名兼容
 
 服务器只保存 Compose、环境变量和持久化数据，不需要保存源码、`node_modules` 或构建缓存。
+
+现有实例从 `ai-llm-agent-rss` 改名为 `rss-source` 时，物理目录暂时保留旧名称。
+这是为了原地复用 PostgreSQL 数据，不是项目名遗漏；不要直接创建空的新数据目录
+替换它们。
 
 ```bash
 sudo install -d -m 0755 /srv/apps/ai-llm-agent-rss
@@ -47,7 +52,7 @@ chmod 600 .env
 | `POSTGRES_USER` | 数据库用户 |
 | `POSTGRES_PASSWORD` | PostgreSQL 强随机密码 |
 | `REDIS_PASSWORD` | RSSHub Redis 强随机密码 |
-| `APP_API_KEY` | REST/MCP Bearer Key，至少 32 字符 |
+| `APP_API_KEY` | REST/CLI Bearer Key，至少 32 字符 |
 | `ALLOWED_HOSTS` | Cloudflare 公网域名、`127.0.0.1`、`localhost` |
 | `ALLOWED_ORIGINS` | 允许的浏览器 Origin 主机名 |
 | `RSSHUB_BASE_URL` | Compose 内部 RSSHub 地址，应指向 `rsshub` 服务 |
@@ -55,7 +60,7 @@ chmod 600 .env
 
 推荐显式设置：
 
-- `IMAGE_NAME=ghcr.io/westernfastshooters/ai-llm-agent-rss`
+- `IMAGE_NAME=ghcr.io/westernfastshooters/rss-source`
 - `IMAGE_TAG=sha-<准备部署的完整提交哈希>`
 - `ALLOWED_HOSTS=<你的 Cloudflare 域名>,localhost,127.0.0.1`
 - `ALLOWED_ORIGINS=<你的 Cloudflare 域名>,localhost,127.0.0.1`（只写主机名，不带 `https://`）
@@ -129,21 +134,27 @@ http://localhost:3000
 
 确保 `ALLOWED_HOSTS` 包含 Cloudflare 上配置的真实域名，否则应用会以 `403` 拒绝请求。
 
-Cloudflare Access 负责边界认证，应用仍要求 `Authorization: Bearer <APP_API_KEY>`。自动化或 MCP 客户端需要同时满足两层认证。
+Cloudflare Access 负责边界认证，应用仍要求 `Authorization: Bearer <APP_API_KEY>`。
+CLI 通过 `CF_ACCESS_CLIENT_ID` 和 `CF_ACCESS_CLIENT_SECRET` 发送 Access Service
+Token，同时通过 `RSS_SOURCE_API_KEY` 完成应用层认证。
 
-## 6. 导入 232 个信源
+## 6. 同步 Folo 信源
 
-`seed/ai-llm-agent-sources.opml` 不需要长期保留在服务器。可以在本地通过 Cloudflare 地址上传，或临时复制到服务器导入后删除：
+使用发布后的 CLI 从 Folo 读取普通订阅并展开列表内的 feed：
 
 ```bash
-curl -X POST \
-  -H "Authorization: Bearer <APP_API_KEY>" \
-  -H "Content-Type: application/xml" \
-  --data-binary @ai-llm-agent-sources.opml \
-  https://<你的域名>/api/opml/import
+export RSS_SOURCE_URL=https://<你的域名>
+export RSS_SOURCE_API_KEY='<APP_API_KEY>'
+export CF_ACCESS_CLIENT_ID='<Access Client ID>'
+export CF_ACCESS_CLIENT_SECRET='<Access Client Secret>'
+
+npx --yes folocli@latest whoami
+npx --yes rss-source-cli@latest folo sync --dry-run
+npx --yes rss-source-cli@latest folo sync
 ```
 
-不要在首次导入时添加 `?refresh=true`。调度器会按照并发限制逐批抓取，减少服务器峰值和远端限流。
+同步新增的订阅不会立即抓取；调度器会按照并发限制逐批处理，减少服务器峰值和
+远端限流。仓库内的 `seed/ai-llm-agent-sources.opml` 仍可用于离线恢复基础信源。
 
 ## 7. 更新与回滚
 

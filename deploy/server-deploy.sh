@@ -3,11 +3,13 @@ set -Eeuo pipefail
 
 umask 077
 
+# Physical paths intentionally keep the original deployment name so existing
+# PostgreSQL and Redis data are reused during the rss-source rename.
 readonly APP_NAME="ai-llm-agent-rss"
 readonly APP_DIR="/srv/apps/${APP_NAME}"
 readonly ENV_FILE="${APP_DIR}/.env"
 readonly COMPOSE_FILE="${APP_DIR}/compose.production.yaml"
-readonly IMAGE_REPO="ghcr.io/westernfastshooters/ai-llm-agent-rss"
+readonly DEFAULT_IMAGE_REPO="ghcr.io/westernfastshooters/rss-source"
 
 exec 9>"/run/lock/${APP_NAME}.lock"
 flock -n 9 || { echo "A deployment is already running." >&2; exit 75; }
@@ -42,7 +44,9 @@ printf '%s' "$ghcr_token" | docker login ghcr.io -u "$actor" --password-stdin >/
 unset ghcr_token
 
 new_tag="sha-${commit}"
-new_image="${IMAGE_REPO}:${new_tag}"
+image_repo="$(sed -n 's/^IMAGE_NAME=//p' "$ENV_FILE" | tail -n 1)"
+image_repo="${image_repo:-$DEFAULT_IMAGE_REPO}"
+new_image="${image_repo}:${new_tag}"
 previous_tag="$(sed -n 's/^IMAGE_TAG=//p' "$ENV_FILE" | tail -n 1)"
 cp "$COMPOSE_FILE" "${deploy_tmp}/compose.previous.yaml"
 

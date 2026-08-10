@@ -5,7 +5,7 @@ export function createLogger(config: Pick<AppConfig, "logLevel" | "nodeEnv">): L
   return pino({
     level: config.logLevel,
     base: {
-      service: "ai-llm-agent-rss",
+      service: "rss-source",
       environment: config.nodeEnv,
     },
     redact: {

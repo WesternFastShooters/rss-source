@@ -18,6 +18,7 @@ playwright-report
 tests
 work
 outputs
+packages
 .DS_Store
 README.md
 compose*.yaml

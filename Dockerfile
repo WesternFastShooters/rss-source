@@ -18,7 +18,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
 FROM dependencies AS build
 COPY tsconfig.json tsconfig.build.json ./
 COPY src ./src
-RUN pnpm build
+RUN pnpm build:server
 
 FROM base AS production-dependencies
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
