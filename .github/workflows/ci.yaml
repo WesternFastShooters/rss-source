@@ -12,7 +12,6 @@ permissions:
 env:
   NODE_VERSION: 24.18.0
   IMAGE_NAME: ghcr.io/westernfastshooters/rss-source
-  LEGACY_IMAGE_NAME: ghcr.io/westernfastshooters/ai-llm-agent-rss
 
 concurrency:
   group: rss-source-${{ github.ref }}
@@ -90,9 +89,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: |
-            ${{ env.IMAGE_NAME }}
-            ${{ env.LEGACY_IMAGE_NAME }}
+          images: ${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest
             type=sha,format=long

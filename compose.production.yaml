@@ -1,6 +1,4 @@
-# The legacy Compose project name is intentionally retained so an in-place
-# production upgrade reuses the existing containers and data volumes.
-name: ai-llm-agent-rss
+name: rss-source
 
 x-logging: &default-logging
   driver: local
@@ -77,7 +75,7 @@ services:
       - -c
       - maintenance_work_mem=64MB
     volumes:
-      - /srv/data/ai-llm-agent-rss/postgres:/var/lib/postgresql/data
+      - /srv/data/rss-source/postgres:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
       interval: 10s
@@ -100,7 +98,7 @@ services:
       REDIS_PASSWORD: ${REDIS_PASSWORD:?REDIS_PASSWORD is required}
     command: ["sh", "-c", "exec redis-server --appendonly yes --requirepass \"$${REDIS_PASSWORD}\""]
     volumes:
-      - /srv/data/ai-llm-agent-rss/redis:/data
+      - /srv/data/rss-source/redis:/data
     healthcheck:
       test: ["CMD-SHELL", "redis-cli -a \"$${REDIS_PASSWORD}\" ping | grep -q PONG"]
       interval: 10s

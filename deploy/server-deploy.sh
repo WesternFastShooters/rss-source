@@ -3,9 +3,7 @@ set -Eeuo pipefail
 
 umask 077
 
-# Physical paths intentionally keep the original deployment name so existing
-# PostgreSQL and Redis data are reused during the rss-source rename.
-readonly APP_NAME="ai-llm-agent-rss"
+readonly APP_NAME="rss-source"
 readonly APP_DIR="/srv/apps/${APP_NAME}"
 readonly ENV_FILE="${APP_DIR}/.env"
 readonly COMPOSE_FILE="${APP_DIR}/compose.production.yaml"

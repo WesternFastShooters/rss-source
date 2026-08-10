@@ -26,30 +26,26 @@ CI 密钥在服务器的 `authorized_keys` 中必须绑定固定命令，并使�
 sudo -n /usr/local/sbin/deploy-rss-source
 ```
 
-服务端 `.env` 的主镜像已经切换到 `ghcr.io/westernfastshooters/rss-source`。工作流
-暂时同时发布旧 GHCR 名称，作为改名期间的回滚兼容，不作为新部署入口。
+服务端 `.env` 使用 `ghcr.io/westernfastshooters/rss-source`，工作流只发布这个
+正式镜像名称。
 
-## 1. 服务器目录与改名兼容
+## 1. 服务器目录
 
 服务器只保存 Compose、环境变量和持久化数据，不需要保存源码、`node_modules` 或构建缓存。
 
-现有实例从 `ai-llm-agent-rss` 改名为 `rss-source` 时，物理目录暂时保留旧名称。
-这是为了原地复用 PostgreSQL 数据，不是项目名遗漏；不要直接创建空的新数据目录
-替换它们。
-
 ```bash
-sudo install -d -m 0755 /srv/apps/ai-llm-agent-rss
-sudo install -d -m 0755 /srv/data/ai-llm-agent-rss/postgres
-sudo install -d -m 0755 /srv/data/ai-llm-agent-rss/redis
+sudo install -d -m 0755 /srv/apps/rss-source
+sudo install -d -m 0755 /srv/data/rss-source/postgres
+sudo install -d -m 0755 /srv/data/rss-source/redis
 ```
 
-将以下两个文件放入 `/srv/apps/ai-llm-agent-rss`：
+将以下两个文件放入 `/srv/apps/rss-source`：
 
 - `compose.production.yaml`
 - 由 `.env.example` 创建的 `.env`
 
 ```bash
-cd /srv/apps/ai-llm-agent-rss
+cd /srv/apps/rss-source
 chmod 600 .env
 ```
 
@@ -103,7 +99,7 @@ GitHub Actions 推送镜像使用自动生成的 `GITHUB_TOKEN`，不需要新�
 先验证 Compose，再启动依赖：
 
 ```bash
-cd /srv/apps/ai-llm-agent-rss
+cd /srv/apps/rss-source
 docker compose --env-file .env -f compose.production.yaml config --quiet
 docker compose --env-file .env -f compose.production.yaml pull
 docker compose --env-file .env -f compose.production.yaml up -d postgres redis rsshub
@@ -185,8 +181,8 @@ curl --fail http://127.0.0.1:3000/ready
 
 需要备份的目录：
 
-- `/srv/data/ai-llm-agent-rss/postgres`：必须备份，包含全部订阅和文章状态
-- `/srv/data/ai-llm-agent-rss/redis`：RSSHub 缓存，可丢弃后重建
+- `/srv/data/rss-source/postgres`：必须备份，包含全部订阅和文章状态
+- `/srv/data/rss-source/redis`：RSSHub 缓存，可丢弃后重建
 
 推荐使用逻辑备份，而非直接复制运行中的 PostgreSQL 目录：
 

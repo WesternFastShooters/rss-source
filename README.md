@@ -146,8 +146,7 @@ Authorization: Bearer <APP_API_KEY>
 - 所有服务 `restart: unless-stopped`
 - 自动部署使用不可变的 `sha-<完整提交哈希>` 镜像
 - 新镜像为 `ghcr.io/westernfastshooters/rss-source`
-- 为保证现有生产数据不丢失，物理数据目录暂时保留旧路径
-  `/srv/data/ai-llm-agent-rss`
+- PostgreSQL 和 Redis 持久化到 `/srv/data/rss-source`
 
 ## 发布
 
@@ -156,5 +155,4 @@ Authorization: Bearer <APP_API_KEY>
 - GHCR：`ghcr.io/westernfastshooters/rss-source`
 
 推送 `main` 后，GitHub Actions 会运行类型检查、测试和生产构建，构建
-`linux/amd64` 镜像并自动部署腾讯云。过渡期间同一镜像也会推送到旧 GHCR 名称，
-确保现有受限部署脚本不中断。
+`linux/amd64` 镜像并自动部署腾讯云。
