@@ -20,6 +20,15 @@
 CI 密钥在服务器的 `authorized_keys` 中必须绑定固定命令，并使用 `restrict`，不能
 作为普通 SSH 登录密钥使用。
 
+当前生产服务器的固定命令为：
+
+```text
+sudo -n /usr/local/sbin/deploy-rss-source
+```
+
+服务端 `.env` 的主镜像已经切换到 `ghcr.io/westernfastshooters/rss-source`。工作流
+暂时同时发布旧 GHCR 名称，作为改名期间的回滚兼容，不作为新部署入口。
+
 ## 1. 服务器目录与改名兼容
 
 服务器只保存 Compose、环境变量和持久化数据，不需要保存源码、`node_modules` 或构建缓存。
