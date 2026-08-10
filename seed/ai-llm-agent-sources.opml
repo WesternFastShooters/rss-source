@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>AI、LLM 与 Agent 全景源库（232 源）</title>
+  </head>
+  <body>
+    <outline text="01 官方实验室" title="01 官方实验室">
+      <outline type="rss" text="OpenAI News" title="OpenAI News" xmlUrl="https://openai.com/news/rss.xml"/>
+      <outline type="rss" text="Anthropic News" title="Anthropic News" xmlUrl="https://rsshub.bestblogs.dev/anthropic/news"/>
+      <outline type="rss" text="Anthropic Research" title="Anthropic Research" xmlUrl="rsshub://anthropic/research"/>
+      <outline type="rss" text="Google DeepMind" title="Google DeepMind" xmlUrl="https://deepmind.google/blog/rss.xml"/>
+      <outline type="rss" text="Google AI" title="Google AI" xmlUrl="https://blog.google/innovation-and-ai/technology/ai/rss/"/>
+      <outline type="rss" text="Google Research" title="Google Research" xmlUrl="https://research.google/blog/rss/"/>
+      <outline type="rss" text="Meta AI Research" title="Meta AI Research" xmlUrl="https://engineering.fb.com/category/ai-research/feed/"/>
+      <outline type="rss" text="Meta AI 官方动态" title="Meta AI 官方动态" xmlUrl="rsshub://twitter/user/AIatMeta"/>
+      <outline type="rss" text="Microsoft Research" title="Microsoft Research" xmlUrl="https://api.xgo.ing/rss/user/61f4b78554fb4b8fa5653ec5d924d15a"/>
+      <outline type="rss" text="Apple Machine Learning Research" title="Apple Machine Learning Research" xmlUrl="https://machinelearning.apple.com/rss.xml"/>
+      <outline type="rss" text="Amazon Science" title="Amazon Science" xmlUrl="https://www.amazon.science/index.rss"/>
+      <outline type="rss" text="AWS Machine Learning Blog" title="AWS Machine Learning Blog" xmlUrl="https://aws.amazon.com/blogs/machine-learning/feed/"/>
+      <outline type="rss" text="IBM Research" title="IBM Research" xmlUrl="https://research.ibm.com/rss"/>
+      <outline type="rss" text="NVIDIA Generative AI" title="NVIDIA Generative AI" xmlUrl="https://developer.nvidia.com/blog/category/generative-ai/feed/"/>
+      <outline type="rss" text="NVIDIA Blog" title="NVIDIA Blog" xmlUrl="https://blogs.nvidia.com/feed/"/>
+      <outline type="rss" text="Cohere Blog" title="Cohere Blog" xmlUrl="rsshub://cohere/blog"/>
+      <outline type="rss" text="Mistral AI" title="Mistral AI" xmlUrl="rsshub://twitter/user/MistralAI"/>
+      <outline type="rss" text="AI21 Labs" title="AI21 Labs" xmlUrl="rsshub://twitter/user/ai21labs"/>
+      <outline type="rss" text="Sakana AI" title="Sakana AI" xmlUrl="https://sakana.ai/feed.xml"/>
+      <outline type="rss" text="xAI" title="xAI" xmlUrl="rsshub://twitter/user/xai"/>
+      <outline type="rss" text="Perplexity" title="Perplexity" xmlUrl="rsshub://twitter/user/perplexity_ai"/>
+      <outline type="rss" text="Stability AI" title="Stability AI" xmlUrl="rsshub://twitter/user/StabilityAI"/>
+      <outline type="rss" text="Runway" title="Runway" xmlUrl="rsshub://twitter/user/runwayml"/>
+      <outline type="rss" text="ElevenLabs Blog" title="ElevenLabs Blog" xmlUrl="https://api.bestblogs.dev/feed/elevenLabsBlog"/>
+      <outline type="rss" text="Nous Research" title="Nous Research" xmlUrl="rsshub://twitter/user/NousResearch"/>
+      <outline type="rss" text="Technology Innovation Institute" title="Technology Innovation Institute" xmlUrl="rsshub://twitter/user/tiiuae"/>
+    </outline>
+    <outline text="02 中文模型与媒体" title="02 中文模型与媒体">
+      <outline type="rss" text="Qwen Blog" title="Qwen Blog" xmlUrl="https://qwenlm.github.io/blog/index.xml"/>
+      <outline type="rss" text="DeepSeek 新闻" title="DeepSeek 新闻" xmlUrl="rsshub://deepseek/news"/>
+      <outline type="rss" text="DeepSeek Transparency" title="DeepSeek Transparency" xmlUrl="rsshub://rsshub/transform/html/https%3A%2F%2Fwww.deepseek.com%2Fen%2Ftransparency%2F/title%3DDeepSeek%2520Transparency%26item%3Dsection%253Anth-of-type(2)%2520%253E%2520div.flex.flex-col%2520%253E%2520div%26itemTitle%3Dspan.text-xl%26itemLink%3Da%255Bhref*%253D&apos;huggingface.co&apos;%255D%26itemPubDate%3Ddiv.text-sm%2520span"/>
+      <outline type="rss" text="ByteDance Seed Tech Blog" title="ByteDance Seed Tech Blog" xmlUrl="rsshub://rsshub/transform/json/https%3A%2F%2Fseed.bytedance.com%2Fapi%2Fget_article_list_v2%3Farticle_type%3D2%26count%3D20%26order_desc%3Dtrue%26page_token%3D0/title%3DByteDance%2520Seed%2520Tech%2520Blog%26item%3Dsub_article_list%26itemTitle%3DArticleSubContentEn.Title%26itemLink%3DArticleSubContentEn.TitleKey%26itemLinkPrefix%3Dhttps%253A%252F%252Fseed.bytedance.com%252Fen%252Fblog%252F%26itemDesc%3DArticleSubContentEn.Abstract%26itemPubDate%3DArticleMeta.PublishDate"/>
+      <outline type="rss" text="Moonshot AI / Kimi Blog" title="Moonshot AI / Kimi Blog" xmlUrl="rsshub://rsshub/transform/html/https%3A%2F%2Fplatform.kimi.com%2Fblog/title%3DMoonshot%2520AI%2520%252F%2520Kimi%2520Blog%26item%3Ddiv.post-item%26itemTitle%3Da%26itemLink%3Da%26itemPubDate%3Dtime%26itemPubDateAttr%3Ddatetime%26itemContent%3Darticle.nx-container"/>
+      <outline type="rss" text="Kimi 官方动态" title="Kimi 官方动态" xmlUrl="rsshub://twitter/user/Kimi_Moonshot"/>
+      <outline type="rss" text="Z.ai / GLM" title="Z.ai / GLM" xmlUrl="rsshub://twitter/user/Zai_org"/>
+      <outline type="rss" text="MiniMax" title="MiniMax" xmlUrl="rsshub://twitter/user/MiniMax_AI"/>
+      <outline type="rss" text="StepFun 阶跃星辰" title="StepFun 阶跃星辰" xmlUrl="rsshub://twitter/user/StepFun_ai"/>
+      <outline type="rss" text="Tencent Hunyuan" title="Tencent Hunyuan" xmlUrl="rsshub://twitter/user/TencentHunyuan"/>
+      <outline type="rss" text="ModelScope 魔搭社区" title="ModelScope 魔搭社区" xmlUrl="https://wechat2rss.bestblogs.dev/feed/d993a885260f96057b9a4c96212cb2c95bb5054b.xml"/>
+      <outline type="rss" text="机器之心" title="机器之心" xmlUrl="https://wechat2rss.bestblogs.dev/feed/8d97af31b0de9e48da74558af128a4673d78c9a3.xml"/>
+      <outline type="rss" text="量子位" title="量子位" xmlUrl="https://www.qbitai.com/feed"/>
+      <outline type="rss" text="新智元" title="新智元" xmlUrl="https://raw.githubusercontent.com/osnsyc/Wechat-Scholar/main/channels/gh_108f2a2a27f4.xml"/>
+      <outline type="rss" text="AI 科技评论" title="AI 科技评论" xmlUrl="https://raw.githubusercontent.com/osnsyc/Wechat-Scholar/main/channels/gh_6ca2fbc2df6e.xml"/>
+      <outline type="rss" text="智东西" title="智东西" xmlUrl="https://zhidx.com/rss"/>
+      <outline type="rss" text="Founder Park" title="Founder Park" xmlUrl="https://wechat2rss.bestblogs.dev/feed/f940695505f2be1399d23cc98182297cadf6f90d.xml"/>
+      <outline type="rss" text="InfoQ · AI 与大模型" title="InfoQ · AI 与大模型" xmlUrl="rsshub://infoq/topic/AI&amp;LLM"/>
+      <outline type="rss" text="雷峰网 · AI" title="雷峰网 · AI" xmlUrl="rsshub://leiphone/category/ai"/>
+      <outline type="rss" text="36氪 · AI" title="36氪 · AI" xmlUrl="rsshub://36kr/information/AI"/>
+    </outline>
+    <outline text="03 学术研究" title="03 学术研究">
+      <outline type="rss" text="Hugging Face Blog" title="Hugging Face Blog" xmlUrl="https://huggingface.co/blog/feed.xml"/>
+      <outline type="rss" text="Hugging Face Daily Papers" title="Hugging Face Daily Papers" xmlUrl="https://raw.githubusercontent.com/huangboming/huggingface-daily-paper-feed/main/feed.xml"/>
+      <outline type="rss" text="BAIR Blog" title="BAIR Blog" xmlUrl="https://bair.berkeley.edu/blog/feed.xml"/>
+      <outline type="rss" text="Stanford AI Lab" title="Stanford AI Lab" xmlUrl="https://ai.stanford.edu/blog/feed.xml"/>
+      <outline type="rss" text="Stanford CRFM" title="Stanford CRFM" xmlUrl="https://crfm.stanford.edu/feed.xml"/>
+      <outline type="rss" text="CMU Machine Learning Blog" title="CMU Machine Learning Blog" xmlUrl="https://blog.ml.cmu.edu/feed/"/>
+      <outline type="rss" text="Vector Institute" title="Vector Institute" xmlUrl="https://vectorinstitute.ai/feed/"/>
+      <outline type="rss" text="EleutherAI" title="EleutherAI" xmlUrl="https://blog.eleuther.ai/index.xml"/>
+      <outline type="rss" text="fast.ai" title="fast.ai" xmlUrl="https://www.fast.ai/index.xml"/>
+      <outline type="rss" text="The Gradient" title="The Gradient" xmlUrl="https://thegradient.pub/rss/"/>
+      <outline type="rss" text="MIT News · Artificial Intelligence" title="MIT News · Artificial Intelligence" xmlUrl="https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml"/>
+      <outline type="rss" text="Ai2 / Allen Institute for AI" title="Ai2 / Allen Institute for AI" xmlUrl="rsshub://twitter/user/allen_ai"/>
+      <outline type="rss" text="Mila" title="Mila" xmlUrl="rsshub://twitter/user/Mila_Quebec"/>
+      <outline type="rss" text="Cohere For AI" title="Cohere For AI" xmlUrl="rsshub://twitter/user/CohereForAI"/>
+    </outline>
+    <outline text="04 论文高流量" title="04 论文高流量">
+      <outline type="rss" text="arXiv · Artificial Intelligence" title="arXiv · Artificial Intelligence" xmlUrl="https://rss.arxiv.org/rss/cs.AI"/>
+      <outline type="rss" text="arXiv · Computation and Language" title="arXiv · Computation and Language" xmlUrl="https://rss.arxiv.org/rss/cs.CL"/>
+      <outline type="rss" text="arXiv · Machine Learning" title="arXiv · Machine Learning" xmlUrl="https://rss.arxiv.org/rss/cs.LG"/>
+      <outline type="rss" text="arXiv · Multiagent Systems" title="arXiv · Multiagent Systems" xmlUrl="https://rss.arxiv.org/rss/cs.MA"/>
+      <outline type="rss" text="arXiv · Robotics" title="arXiv · Robotics" xmlUrl="https://rss.arxiv.org/rss/cs.RO"/>
+      <outline type="rss" text="arXiv · Computer Vision" title="arXiv · Computer Vision" xmlUrl="https://rss.arxiv.org/rss/cs.CV"/>
+      <outline type="rss" text="arXiv · Statistics ML" title="arXiv · Statistics ML" xmlUrl="https://rss.arxiv.org/rss/stat.ML"/>
+    </outline>
+    <outline text="05 Agent 生态" title="05 Agent 生态">
+      <outline type="rss" text="Model Context Protocol Blog" title="Model Context Protocol Blog" xmlUrl="https://blog.modelcontextprotocol.io/index.xml"/>
+      <outline type="rss" text="LangChain Blog" title="LangChain Blog" xmlUrl="https://www.langchain.com/blog/rss.xml"/>
+      <outline type="rss" text="OpenAI Agents SDK · Python Releases" title="OpenAI Agents SDK · Python Releases" xmlUrl="https://github.com/openai/openai-agents-python/releases.atom"/>
+      <outline type="rss" text="OpenAI Agents SDK · JavaScript Releases" title="OpenAI Agents SDK · JavaScript Releases" xmlUrl="https://github.com/openai/openai-agents-js/releases.atom"/>
+      <outline type="rss" text="Claude Agent SDK · Python Releases" title="Claude Agent SDK · Python Releases" xmlUrl="https://github.com/anthropics/claude-agent-sdk-python/releases.atom"/>
+      <outline type="rss" text="Claude Agent SDK · TypeScript Releases" title="Claude Agent SDK · TypeScript Releases" xmlUrl="https://github.com/anthropics/claude-agent-sdk-typescript/releases.atom"/>
+      <outline type="rss" text="Google ADK · Python Releases" title="Google ADK · Python Releases" xmlUrl="https://github.com/google/adk-python/releases.atom"/>
+      <outline type="rss" text="Microsoft Agent Framework Releases" title="Microsoft Agent Framework Releases" xmlUrl="https://github.com/microsoft/agent-framework/releases.atom"/>
+      <outline type="rss" text="Microsoft AutoGen Releases" title="Microsoft AutoGen Releases" xmlUrl="https://github.com/microsoft/autogen/releases.atom"/>
+      <outline type="rss" text="Microsoft Semantic Kernel Releases" title="Microsoft Semantic Kernel Releases" xmlUrl="https://github.com/microsoft/semantic-kernel/releases.atom"/>
+      <outline type="rss" text="AWS Strands Agents Releases" title="AWS Strands Agents Releases" xmlUrl="https://github.com/strands-agents/sdk-python/releases.atom"/>
+      <outline type="rss" text="Pydantic AI Releases" title="Pydantic AI Releases" xmlUrl="https://github.com/pydantic/pydantic-ai/releases.atom"/>
+      <outline type="rss" text="DSPy Releases" title="DSPy Releases" xmlUrl="https://github.com/stanfordnlp/dspy/releases.atom"/>
+      <outline type="rss" text="Agno Releases" title="Agno Releases" xmlUrl="https://github.com/agno-agi/agno/releases.atom"/>
+      <outline type="rss" text="CrewAI Releases" title="CrewAI Releases" xmlUrl="https://github.com/crewAIInc/crewAI/releases.atom"/>
+      <outline type="rss" text="LlamaIndex Releases" title="LlamaIndex Releases" xmlUrl="https://github.com/run-llama/llama_index/releases.atom"/>
+      <outline type="rss" text="Haystack Releases" title="Haystack Releases" xmlUrl="https://github.com/deepset-ai/haystack/releases.atom"/>
+      <outline type="rss" text="smolagents Releases" title="smolagents Releases" xmlUrl="https://github.com/huggingface/smolagents/releases.atom"/>
+      <outline type="rss" text="Letta Releases" title="Letta Releases" xmlUrl="https://github.com/letta-ai/letta/releases.atom"/>
+      <outline type="rss" text="Browser Use Releases" title="Browser Use Releases" xmlUrl="https://github.com/browser-use/browser-use/releases.atom"/>
+      <outline type="rss" text="Stagehand Releases" title="Stagehand Releases" xmlUrl="https://github.com/browserbase/stagehand/releases.atom"/>
+      <outline type="rss" text="Mastra Releases" title="Mastra Releases" xmlUrl="https://github.com/mastra-ai/mastra/releases.atom"/>
+      <outline type="rss" text="LangChain Releases" title="LangChain Releases" xmlUrl="https://github.com/langchain-ai/langchain/releases.atom"/>
+      <outline type="rss" text="LangGraph Releases" title="LangGraph Releases" xmlUrl="https://github.com/langchain-ai/langgraph/releases.atom"/>
+      <outline type="rss" text="MCP Servers Releases" title="MCP Servers Releases" xmlUrl="https://github.com/modelcontextprotocol/servers/releases.atom"/>
+      <outline type="rss" text="MCP Specification Releases" title="MCP Specification Releases" xmlUrl="https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom"/>
+      <outline type="rss" text="A2A Protocol Releases" title="A2A Protocol Releases" xmlUrl="https://github.com/a2aproject/A2A/releases.atom"/>
+      <outline type="rss" text="OpenHands Releases" title="OpenHands Releases" xmlUrl="https://github.com/All-Hands-AI/OpenHands/releases.atom"/>
+      <outline type="rss" text="Aider Releases" title="Aider Releases" xmlUrl="https://github.com/Aider-AI/aider/releases.atom"/>
+      <outline type="rss" text="OpenAI Codex Releases" title="OpenAI Codex Releases" xmlUrl="https://github.com/openai/codex/releases.atom"/>
+      <outline type="rss" text="Claude Code Releases" title="Claude Code Releases" xmlUrl="https://github.com/anthropics/claude-code/releases.atom"/>
+      <outline type="rss" text="Gemini CLI Releases" title="Gemini CLI Releases" xmlUrl="https://github.com/google-gemini/gemini-cli/releases.atom"/>
+      <outline type="rss" text="Continue Releases" title="Continue Releases" xmlUrl="https://github.com/continuedev/continue/releases.atom"/>
+      <outline type="rss" text="Cline Releases" title="Cline Releases" xmlUrl="https://github.com/cline/cline/releases.atom"/>
+      <outline type="rss" text="Roo Code Releases" title="Roo Code Releases" xmlUrl="https://github.com/RooCodeInc/Roo-Code/releases.atom"/>
+      <outline type="rss" text="Goose Releases" title="Goose Releases" xmlUrl="https://github.com/block/goose/releases.atom"/>
+      <outline type="rss" text="Qwen-Agent Releases" title="Qwen-Agent Releases" xmlUrl="https://github.com/QwenLM/Qwen-Agent/releases.atom"/>
+      <outline type="rss" text="MetaGPT Releases" title="MetaGPT Releases" xmlUrl="https://github.com/FoundationAgents/MetaGPT/releases.atom"/>
+      <outline type="rss" text="CAMEL Releases" title="CAMEL Releases" xmlUrl="https://github.com/camel-ai/camel/releases.atom"/>
+      <outline type="rss" text="AgentScope Releases" title="AgentScope Releases" xmlUrl="https://github.com/modelscope/agentscope/releases.atom"/>
+      <outline type="rss" text="Dify Releases" title="Dify Releases" xmlUrl="https://github.com/langgenius/dify/releases.atom"/>
+      <outline type="rss" text="Flowise Releases" title="Flowise Releases" xmlUrl="https://github.com/FlowiseAI/Flowise/releases.atom"/>
+      <outline type="rss" text="n8n Releases" title="n8n Releases" xmlUrl="https://github.com/n8n-io/n8n/releases.atom"/>
+      <outline type="rss" text="E2B Releases" title="E2B Releases" xmlUrl="https://github.com/e2b-dev/E2B/releases.atom"/>
+      <outline type="rss" text="Composio Releases" title="Composio Releases" xmlUrl="https://github.com/ComposioHQ/composio/releases.atom"/>
+      <outline type="rss" text="Firecrawl Releases" title="Firecrawl Releases" xmlUrl="https://github.com/firecrawl/firecrawl/releases.atom"/>
+      <outline type="rss" text="Mem0 Releases" title="Mem0 Releases" xmlUrl="https://github.com/mem0ai/mem0/releases.atom"/>
+      <outline type="rss" text="Magentic-UI Releases" title="Magentic-UI Releases" xmlUrl="https://github.com/microsoft/magentic-ui/releases.atom"/>
+      <outline type="rss" text="Scenario Agent Testing Releases" title="Scenario Agent Testing Releases" xmlUrl="https://github.com/langwatch/scenario/releases.atom"/>
+    </outline>
+    <outline text="06 推理部署" title="06 推理部署">
+      <outline type="rss" text="Google Developers Blog" title="Google Developers Blog" xmlUrl="https://developers.googleblog.com/feeds/posts/default/"/>
+      <outline type="rss" text="GitHub Changelog" title="GitHub Changelog" xmlUrl="https://github.blog/changelog/feed/"/>
+      <outline type="rss" text="Ollama Blog" title="Ollama Blog" xmlUrl="https://ollama.com/blog/rss.xml"/>
+      <outline type="rss" text="Replicate Blog" title="Replicate Blog" xmlUrl="https://replicate.com/blog/rss"/>
+      <outline type="rss" text="Together AI Blog" title="Together AI Blog" xmlUrl="https://www.together.ai/blog/rss.xml"/>
+      <outline type="rss" text="PyTorch Blog" title="PyTorch Blog" xmlUrl="https://pytorch.org/blog/feed/"/>
+      <outline type="rss" text="Lambda Blog" title="Lambda Blog" xmlUrl="https://lambda.ai/blog/rss.xml"/>
+      <outline type="rss" text="llama.cpp Releases" title="llama.cpp Releases" xmlUrl="https://github.com/ggml-org/llama.cpp/releases.atom"/>
+      <outline type="rss" text="vLLM Releases" title="vLLM Releases" xmlUrl="https://github.com/vllm-project/vllm/releases.atom"/>
+      <outline type="rss" text="SGLang Releases" title="SGLang Releases" xmlUrl="https://github.com/sgl-project/sglang/releases.atom"/>
+      <outline type="rss" text="MLX-LM Releases" title="MLX-LM Releases" xmlUrl="https://github.com/ml-explore/mlx-lm/releases.atom"/>
+      <outline type="rss" text="Transformers Releases" title="Transformers Releases" xmlUrl="https://github.com/huggingface/transformers/releases.atom"/>
+      <outline type="rss" text="Triton Releases" title="Triton Releases" xmlUrl="https://github.com/triton-lang/triton/releases.atom"/>
+      <outline type="rss" text="Ray Releases" title="Ray Releases" xmlUrl="https://github.com/ray-project/ray/releases.atom"/>
+      <outline type="rss" text="MLflow Releases" title="MLflow Releases" xmlUrl="https://github.com/mlflow/mlflow/releases.atom"/>
+      <outline type="rss" text="LiteLLM Releases" title="LiteLLM Releases" xmlUrl="https://github.com/BerriAI/litellm/releases.atom"/>
+      <outline type="rss" text="TensorRT-LLM Releases" title="TensorRT-LLM Releases" xmlUrl="https://github.com/NVIDIA/TensorRT-LLM/releases.atom"/>
+      <outline type="rss" text="FlashInfer Releases" title="FlashInfer Releases" xmlUrl="https://github.com/flashinfer-ai/flashinfer/releases.atom"/>
+      <outline type="rss" text="FlashAttention Releases" title="FlashAttention Releases" xmlUrl="https://github.com/Dao-AILab/flash-attention/releases.atom"/>
+      <outline type="rss" text="bitsandbytes Releases" title="bitsandbytes Releases" xmlUrl="https://github.com/bitsandbytes-foundation/bitsandbytes/releases.atom"/>
+      <outline type="rss" text="whisper.cpp Releases" title="whisper.cpp Releases" xmlUrl="https://github.com/ggml-org/whisper.cpp/releases.atom"/>
+      <outline type="rss" text="PEFT Releases" title="PEFT Releases" xmlUrl="https://github.com/huggingface/peft/releases.atom"/>
+      <outline type="rss" text="Unsloth Releases" title="Unsloth Releases" xmlUrl="https://github.com/unslothai/unsloth/releases.atom"/>
+      <outline type="rss" text="Axolotl Releases" title="Axolotl Releases" xmlUrl="https://github.com/axolotl-ai-cloud/axolotl/releases.atom"/>
+      <outline type="rss" text="NVIDIA NeMo Releases" title="NVIDIA NeMo Releases" xmlUrl="https://github.com/NVIDIA/NeMo/releases.atom"/>
+      <outline type="rss" text="Mistral Inference Releases" title="Mistral Inference Releases" xmlUrl="https://github.com/mistralai/mistral-inference/releases.atom"/>
+      <outline type="rss" text="DeepSeek-V3 Releases" title="DeepSeek-V3 Releases" xmlUrl="https://github.com/deepseek-ai/DeepSeek-V3/releases.atom"/>
+      <outline type="rss" text="DeepGEMM Releases" title="DeepGEMM Releases" xmlUrl="https://github.com/deepseek-ai/DeepGEMM/releases.atom"/>
+    </outline>
+    <outline text="07 RAG 与可观测" title="07 RAG 与可观测">
+      <outline type="rss" text="Weaviate Blog" title="Weaviate Blog" xmlUrl="https://weaviate.io/blog/rss.xml"/>
+      <outline type="rss" text="Qdrant Releases" title="Qdrant Releases" xmlUrl="https://github.com/qdrant/qdrant/releases.atom"/>
+      <outline type="rss" text="Weaviate Releases" title="Weaviate Releases" xmlUrl="https://github.com/weaviate/weaviate/releases.atom"/>
+      <outline type="rss" text="Milvus Releases" title="Milvus Releases" xmlUrl="https://github.com/milvus-io/milvus/releases.atom"/>
+      <outline type="rss" text="Chroma Releases" title="Chroma Releases" xmlUrl="https://github.com/chroma-core/chroma/releases.atom"/>
+      <outline type="rss" text="LanceDB Releases" title="LanceDB Releases" xmlUrl="https://github.com/lancedb/lancedb/releases.atom"/>
+      <outline type="rss" text="Unstructured Releases" title="Unstructured Releases" xmlUrl="https://github.com/Unstructured-IO/unstructured/releases.atom"/>
+      <outline type="rss" text="RAGFlow Releases" title="RAGFlow Releases" xmlUrl="https://github.com/infiniflow/ragflow/releases.atom"/>
+      <outline type="rss" text="LightRAG Releases" title="LightRAG Releases" xmlUrl="https://github.com/HKUDS/LightRAG/releases.atom"/>
+      <outline type="rss" text="Langfuse Releases" title="Langfuse Releases" xmlUrl="https://github.com/langfuse/langfuse/releases.atom"/>
+      <outline type="rss" text="Arize Phoenix Releases" title="Arize Phoenix Releases" xmlUrl="https://github.com/Arize-ai/phoenix/releases.atom"/>
+      <outline type="rss" text="Ragas Releases" title="Ragas Releases" xmlUrl="https://github.com/explodinggradients/ragas/releases.atom"/>
+      <outline type="rss" text="DeepEval Releases" title="DeepEval Releases" xmlUrl="https://github.com/confident-ai/deepeval/releases.atom"/>
+      <outline type="rss" text="Helicone Releases" title="Helicone Releases" xmlUrl="https://github.com/Helicone/helicone/releases.atom"/>
+      <outline type="rss" text="Braintrust SDK Releases" title="Braintrust SDK Releases" xmlUrl="https://github.com/braintrustdata/braintrust-sdk/releases.atom"/>
+      <outline type="rss" text="OpenLIT Releases" title="OpenLIT Releases" xmlUrl="https://github.com/openlit/openlit/releases.atom"/>
+      <outline type="rss" text="OpenLLMetry Releases" title="OpenLLMetry Releases" xmlUrl="https://github.com/traceloop/openllmetry/releases.atom"/>
+      <outline type="rss" text="LangWatch Releases" title="LangWatch Releases" xmlUrl="https://github.com/langwatch/langwatch/releases.atom"/>
+    </outline>
+    <outline text="08 评测安全治理" title="08 评测安全治理">
+      <outline type="rss" text="METR" title="METR" xmlUrl="https://metr.org/feed.xml"/>
+      <outline type="rss" text="Artificial Analysis" title="Artificial Analysis" xmlUrl="rsshub://twitter/user/ArtificialAnlys"/>
+      <outline type="rss" text="Epoch AI" title="Epoch AI" xmlUrl="https://epochai.substack.com/feed"/>
+      <outline type="rss" text="Redwood Research" title="Redwood Research" xmlUrl="https://blog.redwoodresearch.org/feed"/>
+      <outline type="rss" text="LessWrong · Curated" title="LessWrong · Curated" xmlUrl="https://www.lesswrong.com/feed.xml?view=curated-rss"/>
+      <outline type="rss" text="Alignment Forum" title="Alignment Forum" xmlUrl="https://www.alignmentforum.org/feed.xml"/>
+      <outline type="rss" text="ARC Prize" title="ARC Prize" xmlUrl="rsshub://twitter/user/arcprize"/>
+      <outline type="rss" text="Apollo Research" title="Apollo Research" xmlUrl="rsshub://twitter/user/ApolloResearch"/>
+      <outline type="rss" text="UK AI Security Institute" title="UK AI Security Institute" xmlUrl="rsshub://twitter/user/AISecurityInst"/>
+      <outline type="rss" text="GovAI" title="GovAI" xmlUrl="rsshub://twitter/user/GovAIOrg"/>
+      <outline type="rss" text="Center for AI Safety" title="Center for AI Safety" xmlUrl="rsshub://twitter/user/cais"/>
+      <outline type="rss" text="Lakera" title="Lakera" xmlUrl="rsshub://twitter/user/LakeraAI"/>
+      <outline type="rss" text="HiddenLayer" title="HiddenLayer" xmlUrl="rsshub://twitter/user/hiddenlayersec"/>
+      <outline type="rss" text="Protect AI" title="Protect AI" xmlUrl="rsshub://twitter/user/ProtectAICorp"/>
+      <outline type="rss" text="LMSYS / LM Arena" title="LMSYS / LM Arena" xmlUrl="rsshub://twitter/user/lmsysorg"/>
+      <outline type="rss" text="CSET" title="CSET" xmlUrl="https://cset.georgetown.edu/feed/"/>
+      <outline type="rss" text="AI Now Institute" title="AI Now Institute" xmlUrl="https://ainowinstitute.org/feed"/>
+      <outline type="rss" text="Tech Policy Press" title="Tech Policy Press" xmlUrl="https://www.techpolicy.press/rss/feed.xml"/>
+      <outline type="rss" text="NIST · Taking Measure" title="NIST · Taking Measure" xmlUrl="https://www.nist.gov/blogs/taking-measure/rss.xml"/>
+      <outline type="rss" text="LM Evaluation Harness Releases" title="LM Evaluation Harness Releases" xmlUrl="https://github.com/EleutherAI/lm-evaluation-harness/releases.atom"/>
+      <outline type="rss" text="Stanford HELM Releases" title="Stanford HELM Releases" xmlUrl="https://github.com/stanford-crfm/helm/releases.atom"/>
+      <outline type="rss" text="OpenCompass Releases" title="OpenCompass Releases" xmlUrl="https://github.com/open-compass/opencompass/releases.atom"/>
+    </outline>
+    <outline text="09 专家深度" title="09 专家深度">
+      <outline type="rss" text="Interconnects" title="Interconnects" xmlUrl="https://www.interconnects.ai/feed"/>
+      <outline type="rss" text="Import AI" title="Import AI" xmlUrl="https://jack-clark.net/feed/"/>
+      <outline type="rss" text="Lil&apos;Log" title="Lil&apos;Log" xmlUrl="https://lilianweng.github.io/index.xml"/>
+      <outline type="rss" text="Sebastian Raschka" title="Sebastian Raschka" xmlUrl="https://sebastianraschka.com/rss_feed.xml"/>
+      <outline type="rss" text="Ahead of AI" title="Ahead of AI" xmlUrl="https://magazine.sebastianraschka.com/feed"/>
+      <outline type="rss" text="Simon Willison" title="Simon Willison" xmlUrl="https://simonwillison.net/atom/everything/"/>
+      <outline type="rss" text="Chip Huyen" title="Chip Huyen" xmlUrl="https://huyenchip.com/feed.xml"/>
+      <outline type="rss" text="Eugene Yan" title="Eugene Yan" xmlUrl="https://eugeneyan.com/rss/"/>
+      <outline type="rss" text="Nicholas Carlini" title="Nicholas Carlini" xmlUrl="https://nicholas.carlini.com/writing/feed.xml"/>
+      <outline type="rss" text="Hamel Husain Blog" title="Hamel Husain Blog" xmlUrl="https://hamel.dev/index.xml"/>
+      <outline type="rss" text="Hamel Husain 动态" title="Hamel Husain 动态" xmlUrl="rsshub://twitter/user/hamelhusain"/>
+      <outline type="rss" text="Andrej Karpathy" title="Andrej Karpathy" xmlUrl="rsshub://twitter/user/karpathy"/>
+      <outline type="rss" text="Thariq Shihipar" title="Thariq Shihipar" xmlUrl="rsshub://twitter/user/trq212"/>
+      <outline type="rss" text="Tibo" title="Tibo" xmlUrl="rsshub://twitter/user/thsottiaux"/>
+      <outline type="rss" text="One Useful Thing" title="One Useful Thing" xmlUrl="https://www.oneusefulthing.org/feed"/>
+      <outline type="rss" text="AI as Normal Technology" title="AI as Normal Technology" xmlUrl="https://www.normaltech.ai/feed"/>
+      <outline type="rss" text="Understanding AI" title="Understanding AI" xmlUrl="https://www.understandingai.org/feed"/>
+      <outline type="rss" text="Last Week in AI" title="Last Week in AI" xmlUrl="https://lastweekin.ai/feed"/>
+      <outline type="rss" text="Jay Alammar" title="Jay Alammar" xmlUrl="https://jalammar.github.io/feed.xml"/>
+      <outline type="rss" text="Jason Liu / Instructor" title="Jason Liu / Instructor" xmlUrl="https://jxnl.co/feed_rss_created.xml"/>
+      <outline type="rss" text="Gwern" title="Gwern" xmlUrl="https://gwern.substack.com/feed"/>
+      <outline type="rss" text="The Zvi" title="The Zvi" xmlUrl="https://thezvi.substack.com/feed"/>
+      <outline type="rss" text="SemiAnalysis" title="SemiAnalysis" xmlUrl="https://semianalysis.com/feed/"/>
+      <outline type="rss" text="ChinaTalk" title="ChinaTalk" xmlUrl="https://www.chinatalk.media/feed"/>
+      <outline type="rss" text="Exponential View" title="Exponential View" xmlUrl="https://www.exponentialview.co/feed"/>
+      <outline type="rss" text="Vicki Boykis" title="Vicki Boykis" xmlUrl="https://vickiboykis.com/index.xml"/>
+      <outline type="rss" text="DeepLearning.AI" title="DeepLearning.AI" xmlUrl="rsshub://twitter/user/DeepLearningAI"/>
+      <outline type="rss" text="François Chollet" title="François Chollet" xmlUrl="rsshub://twitter/user/fchollet"/>
+    </outline>
+    <outline text="10 新闻产业社区" title="10 新闻产业社区">
+      <outline type="rss" text="MIT Technology Review · AI" title="MIT Technology Review · AI" xmlUrl="https://www.technologyreview.com/topic/artificial-intelligence/feed/"/>
+      <outline type="rss" text="The Verge · AI" title="The Verge · AI" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"/>
+      <outline type="rss" text="TechCrunch · AI" title="TechCrunch · AI" xmlUrl="https://techcrunch.com/category/artificial-intelligence/feed/"/>
+      <outline type="rss" text="WIRED · AI" title="WIRED · AI" xmlUrl="https://www.wired.com/feed/tag/ai/latest/rss"/>
+      <outline type="rss" text="VentureBeat · AI" title="VentureBeat · AI" xmlUrl="https://venturebeat.com/category/ai/feed"/>
+      <outline type="rss" text="IEEE Spectrum · AI" title="IEEE Spectrum · AI" xmlUrl="https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"/>
+      <outline type="rss" text="Ars Technica · AI / Tech" title="Ars Technica · AI / Tech" xmlUrl="https://feeds.arstechnica.com/arstechnica/technology-lab"/>
+      <outline type="rss" text="The Decoder" title="The Decoder" xmlUrl="https://the-decoder.com/feed/"/>
+      <outline type="rss" text="The Rundown AI" title="The Rundown AI" xmlUrl="https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"/>
+      <outline type="rss" text="Ben&apos;s Bites" title="Ben&apos;s Bites" xmlUrl="https://www.bensbites.com/feed"/>
+      <outline type="rss" text="TLDR AI" title="TLDR AI" xmlUrl="https://tldr.tech/api/rss/ai"/>
+      <outline type="rss" text="AI News" title="AI News" xmlUrl="https://www.artificialintelligence-news.com/feed/"/>
+      <outline type="rss" text="Hacker News · LLM" title="Hacker News · LLM" xmlUrl="https://hnrss.org/newest?q=LLM"/>
+      <outline type="rss" text="Reddit · LocalLLaMA" title="Reddit · LocalLLaMA" xmlUrl="https://www.reddit.com/r/LocalLLaMA/.rss"/>
+      <outline type="rss" text="Reddit · MachineLearning" title="Reddit · MachineLearning" xmlUrl="https://www.reddit.com/r/MachineLearning/.rss"/>
+      <outline type="rss" text="Reddit · AI Agents" title="Reddit · AI Agents" xmlUrl="https://www.reddit.com/r/AI_Agents/.rss"/>
+    </outline>
+    <outline text="11 播客访谈" title="11 播客访谈">
+      <outline type="rss" text="Dwarkesh Podcast" title="Dwarkesh Podcast" xmlUrl="https://www.dwarkesh.com/feed"/>
+      <outline type="rss" text="No Priors" title="No Priors" xmlUrl="https://feeds.feedburner.com/airss/xpqtr3hyzcg"/>
+      <outline type="rss" text="TWIML AI Podcast" title="TWIML AI Podcast" xmlUrl="https://feeds.megaphone.fm/MLN2155636147"/>
+      <outline type="rss" text="Practical AI" title="Practical AI" xmlUrl="https://feeds.transistor.fm/practical-ai-machine-learning-data-science-llm"/>
+    </outline>
+  </body>
+</opml>
