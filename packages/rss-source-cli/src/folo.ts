@@ -29,7 +29,19 @@ function array(value: unknown): unknown[] {
 export const runFoloCli: FoloRunner = async (args) => {
   let stdout: string;
   try {
-    ({ stdout } = await execFileAsync("npx", ["--yes", "folocli@latest", ...args, "--format", "json"], {
+    // `folocli` publishes its executable as `folo`. Naming the package and
+    // executable explicitly also keeps this working when rss-source-cli itself
+    // is being run through `npm exec`/`npx`.
+    ({ stdout } = await execFileAsync("npm", [
+      "exec",
+      "--yes",
+      "--package=folocli@latest",
+      "--",
+      "folo",
+      ...args,
+      "--format",
+      "json",
+    ], {
       encoding: "utf8",
       maxBuffer: 32 * 1024 * 1024,
     }));
