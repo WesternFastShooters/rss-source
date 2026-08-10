@@ -21,3 +21,4 @@ outputs
 .DS_Store
 README.md
 compose*.yaml
+!compose.production.yaml

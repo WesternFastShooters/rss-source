@@ -4,6 +4,21 @@
 
 本文件只描述部署准备和命令。本项目不会自动连接或修改服务器。
 
+当前生产链路由 `.github/workflows/ci.yaml` 自动执行：测试成功后构建并推送
+不可变 GHCR 镜像，再通过 CI 专用的受限 SSH 密钥调用
+`deploy/server-deploy.sh`。服务器不会保存长期 GitHub Token；工作流把本次任务的
+短期 `GITHUB_TOKEN` 通过标准输入交给部署脚本，脚本只在拉取镜像期间使用。
+
+仓库需要配置以下 GitHub Actions Secrets：
+
+- `DEPLOY_HOST`
+- `DEPLOY_USER`
+- `DEPLOY_SSH_KEY`
+- `DEPLOY_KNOWN_HOSTS`
+
+CI 密钥在服务器的 `authorized_keys` 中必须绑定固定命令，并使用 `restrict`，不能
+作为普通 SSH 登录密钥使用。
+
 ## 1. 服务器目录
 
 服务器只保存 Compose、环境变量和持久化数据，不需要保存源码、`node_modules` 或构建缓存。

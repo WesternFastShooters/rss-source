@@ -38,6 +38,7 @@ COPY --from=production-dependencies --chown=app:app /app/node_modules ./node_mod
 COPY --from=build --chown=app:app /app/dist ./dist
 COPY --chown=app:app package.json ./package.json
 COPY --chown=app:app migrations ./migrations
+COPY --chown=app:app compose.production.yaml ./deploy/compose.production.yaml
 
 USER 10001:10001
 EXPOSE 3000
