@@ -17,7 +17,8 @@
     "db:migrate:prod": "node dist/db/migrate.js",
     "typecheck": "pnpm typecheck:server && pnpm --filter rss-source-cli typecheck",
     "typecheck:server": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run",
+    "test": "pnpm test:server && pnpm --filter rss-source-cli test",
+    "test:server": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
